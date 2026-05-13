@@ -6,13 +6,11 @@ plugins {
 android {
     compileSdk = compile_sdk_version
     namespace = 'me.ag2s'
-    kotlin {
-        jvmToolchain {
-            languageVersion.set(JavaLanguageVersion.of(17))
-        }
+    kotlinOptions {
+        jvmTarget = '17'
     }
     defaultConfig {
-        minSdk 21
+        minSdk 23
         targetSdk 36
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
